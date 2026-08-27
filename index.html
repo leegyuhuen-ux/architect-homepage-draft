@@ -97,13 +97,13 @@
     grid-template-rows: repeat(2, minmax(180px, auto));
     gap: 32px;
   }
-  .work-item { display: block; }
+  .work-item { display: flex; flex-direction: column; }
   .work-item:first-child { grid-column: 1; grid-row: 1 / span 2; }
   .work-item:nth-child(2) { grid-column: 2; grid-row: 1; }
   .work-item:nth-child(3) { grid-column: 2; grid-row: 2; }
   .work-thumb {
-    aspect-ratio: 4 / 3;
-    height: 100%;
+    flex: 1 1 auto;
+    min-height: 160px;
     border-radius: 4px;
     margin-bottom: 16px;
     background: linear-gradient(135deg, #d8d2c4, #a9967a);
@@ -152,6 +152,7 @@
     .work-item:first-child, .work-item:nth-child(2), .work-item:nth-child(3) {
       grid-column: auto; grid-row: auto;
     }
+    .work-thumb { flex: none; aspect-ratio: 4 / 3; min-height: 0; }
     .contact-grid { grid-template-columns: 1fr; }
   }
 </style>
