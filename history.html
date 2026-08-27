@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연혁·실적 — (주)율그룹건축사사무소</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --ink: #171613;
+    --muted: #726d63;
+    --line: #e3ded4;
+    --accent: #9c6b3e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); overflow-x: hidden; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 { font-family: 'Noto Serif KR', serif; font-weight: 600; }
+  a { color: inherit; text-decoration: none; }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .logo { font-family: 'Noto Serif KR', serif; font-size: 1.1rem; letter-spacing: 0.05em; }
+  .nav ul { display: flex; gap: 32px; list-style: none; font-size: 0.9rem; }
+  .nav ul a.current { color: var(--accent); }
+
+  .page-header {
+    padding: 96px 48px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .page-header .section-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .page-header h1 { font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 16px; }
+  .page-header p { color: var(--muted); max-width: 560px; }
+
+  .section { padding: 80px 48px; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--line); }
+  .section h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 40px; }
+
+  .history-item {
+    display: flex;
+    gap: 32px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .history-item:last-child { border-bottom: none; }
+  .history-year {
+    min-width: 110px;
+    flex-shrink: 0;
+    font-family: 'Noto Serif KR', serif;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .history-year span { display: block; font-size: 0.8rem; color: var(--muted); font-weight: 400; font-family: 'Noto Sans KR', sans-serif; }
+
+  .person-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .person-card { border-top: 1px solid var(--line); padding-top: 24px; }
+  .person-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #d8d2c4, #a9967a);
+  }
+  .person-card h3 { font-size: 1.3rem; margin-bottom: 4px; }
+  .person-role { font-size: 0.85rem; color: var(--accent); margin-bottom: 20px; }
+  .person-card dt { font-size: 0.8rem; color: var(--muted); margin-top: 16px; margin-bottom: 4px; }
+  .person-card dt:first-of-type { margin-top: 0; }
+  .person-card dd { font-size: 0.92rem; }
+  .person-card dd ul { padding-left: 18px; margin-top: 2px; }
+
+  .award-year {
+    display: flex;
+    gap: 32px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .award-year:last-child { border-bottom: none; }
+  .award-year .yr {
+    min-width: 70px;
+    flex-shrink: 0;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .award-year ul { list-style: none; font-size: 0.92rem; }
+  .award-year li { margin-bottom: 6px; color: var(--ink); }
+  .award-year li:last-child { margin-bottom: 0; }
+
+  footer {
+    padding: 32px 48px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 720px) {
+    .nav { padding: 16px 24px; }
+    .nav ul { gap: 16px; font-size: 0.8rem; }
+    .page-header { padding: 72px 24px 48px; }
+    .section { padding: 56px 24px; }
+    .person-grid { grid-template-columns: 1fr; gap: 32px; }
+    .history-item, .award-year { gap: 20px; }
+    .history-year, .award-year .yr { min-width: 76px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">(주)율그룹건축사사무소</div>
+  <ul>
+    <li><a href="index.html">홈</a></li>
+    <li><a href="index.html#about">소개</a></li>
+    <li><a href="index.html#portfolio">포트폴리오</a></li>
+    <li><a href="history.html" class="current">연혁·실적</a></li>
+    <li><a href="index.html#contact">연락처</a></li>
+  </ul>
+</header>
+
+<div class="page-header">
+  <div class="section-label">History &amp; Track Record</div>
+  <h1>연혁 · 실적</h1>
+  <p>1992년 개소 이래 33년간 쌓아온 기록입니다.</p>
+</div>
+
+<section class="section">
+  <h2>연혁</h2>
+
+  <div class="history-item">
+    <div class="history-year">1992<span>10월</span></div>
+    <div class="history-event">율(律)건축사사무소 개소</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">1995<span>10월</span></div>
+    <div class="history-event">(주)율그룹건축사사무소 법인 설립 · 최기주, 강문수, 김희순 대표이사 취임</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2002</div>
+    <div class="history-event">"전북대 공대9호관" 전주시 건축상 금상 수상</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2004</div>
+    <div class="history-event">대표이사 변경 · 강문수, 김희순 취임</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2012<span>5월</span></div>
+    <div class="history-event">본점 이전 (전주시 완산구 효자동 3가)</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2013<span>3월</span></div>
+    <div class="history-event">연구개발전담부서 설립</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2013<span>12월</span></div>
+    <div class="history-event">"고우당" 군산시 건축문화상 금상 수상</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2014<span>3월</span></div>
+    <div class="history-event">"바울센터" 전라북도 아름다운건축상 금상 수상</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2017<span>10월</span></div>
+    <div class="history-event">"전주효자도서관" 전라북도 건축문화상 수상 · 전라북도 아름다운 건축상 수상</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2021<span>10월</span></div>
+    <div class="history-event">"The May Hotel" 전라북도 건축문화상 수상</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2022<span>8월</span></div>
+    <div class="history-event">학술·연구용역 업종 등록</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2022<span>11월</span></div>
+    <div class="history-event">"전주 천년 한지관" 전라북도 건축문화상 대상 수상</div>
+  </div>
+  <div class="history-item">
+    <div class="history-year">2025<span>12월</span></div>
+    <div class="history-event">건설엔지니어링업 등록</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>대표이사 소개</h2>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="person-photo"></div>
+      <h3>강문수</h3>
+      <div class="person-role">대표이사 · 건축사 (제5102호)</div>
+      <dt>학력</dt>
+      <dd>전북대학교 건축공학과 졸업 (1983) · 전북대학교 환경대학원 수료 (1995)</dd>
+      <dt>경력</dt>
+      <dd>삼아건축사사무소 설계부 → 종합건축사사무소 진.원.홍인 → (주)율그룹건축사사무소 (1995~현재)</dd>
+      <dt>자격</dt>
+      <dd>건축사 (1992) · 건축기사1급 (1982)</dd>
+      <dt>기타</dt>
+      <dd>
+        <ul>
+          <li>(現) 전주시 건축위원회 위원</li>
+          <li>(現) LH공사 전북본부 매입심의위원회 위원</li>
+          <li>전북대학교 건축공학과 총동문회장</li>
+          <li>전주시 정책 자문위원 · 도시분쟁조정위원회 위원</li>
+        </ul>
+      </dd>
+    </div>
+    <div class="person-card">
+      <div class="person-photo"></div>
+      <h3>김희순</h3>
+      <div class="person-role">대표이사 · 건축사 (제4245호)</div>
+      <dt>학력</dt>
+      <dd>전북대학교 건축공학과 졸업 (1978) · 전북대학교 환경대학원 석사 (1996)</dd>
+      <dt>경력</dt>
+      <dd>대한주택공사 단지계획부 등 → (주)율그룹건축사사무소 (1992~현재, 2001~2008 건축사사무소 메가피아)</dd>
+      <dt>자격</dt>
+      <dd>건축사 (1990) · 건축기사1급 (1977)</dd>
+      <dt>기타</dt>
+      <dd>
+        <ul>
+          <li>(現) 전주시 경관위원회 위원</li>
+          <li>(現) 익산시 공공건축심의위원회 위원</li>
+          <li>전북여성건축가회 명예회장</li>
+          <li>전라북도 공공건축가 · 전주시 공공건축가</li>
+        </ul>
+      </dd>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>현상설계 당선 현황</h2>
+  <div class="award-year">
+    <div class="yr">2025</div>
+    <ul><li>진안군 진안읍 농촌중심지활성화사업 건축설계 제안공모 우수작</li></ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2024</div>
+    <ul>
+      <li>김제여고 후관동 그린스마트스쿨 개축 설계 제안공모 당선</li>
+      <li>익산 이색교도소 조성사업 건축설계 제안공모 입상</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2023</div>
+    <ul>
+      <li>부안 격포항 권역단위 인구활력 연계사업 건축설계 제안공모 당선</li>
+      <li>군산대야초 후관동 그린스마트스쿨 개축 설계공모 당선</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2022</div>
+    <ul>
+      <li>고창군 제2청사(의회청사) 건립 설계용역 제안공모 우수작</li>
+      <li>무주 반디나래지원센터 설계공모 당선</li>
+      <li>용산초 그린스마트 미래학교 증개축 설계 제안공모 당선</li>
+      <li>남원 유곡리와 두락리 고분군 홍보관 건립 설계공모 당선</li>
+      <li>정원식물 지원센터 이전사업 건축설계 공모 최우수작</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2021</div>
+    <ul><li>남원 터미널지구 도시재생뉴딜 이음센터 건립 제안공모 우수작</li></ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2020</div>
+    <ul>
+      <li>고창 모양성마을 울력터 건립사업 제안공모 당선</li>
+      <li>장수 가야역사관 건립공사 설계공모 입상</li>
+      <li>민속국악원 청사 시설 현대화공사 제안공모 입상</li>
+      <li>서수면 농촌중심지활성화사업 및 면청사 건립 제안공모 우수작</li>
+      <li>전주시 혁신동 주민센터 건립공사 제안공모 입상</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2019</div>
+    <ul>
+      <li>정읍경찰서 신축사업 설계공모 우수작</li>
+      <li>전주 전통한지 생산시설 제안공모 당선</li>
+      <li>새만금 종합관리센터 제안공모 우수작</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2018</div>
+    <ul><li>대야면 농촌중심지 활성화사업 제안공모 당선</li></ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2017</div>
+    <ul>
+      <li>군산시 고군산 종합관광센터 공모 당선</li>
+      <li>남원시 이너뷰티 제안공모 당선</li>
+      <li>고창군 흥덕면 하모니센터 제안공모 당선</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2016</div>
+    <ul>
+      <li>전주시 아동·청소년센터 제안서 당선</li>
+      <li>전북어린이창의체험관 건립 기본 및 실시설계용역 현상공모 우수작</li>
+      <li>남원시 청사(의회) 증축공사 건축설계용역 제안서 당선</li>
+      <li>군산시 농업인회관 신축공사 건축설계용역 제안서 당선</li>
+      <li>논산시 장애인복지관 건립을 위한 기본 및 실시설계 우수작</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2015</div>
+    <ul>
+      <li>전북대학교 법학전문대학원 현상공모 당선</li>
+      <li>소양면주민자치센터 현상공모 가작</li>
+      <li>전주봉곡초등학교 신축공사 현상공모 우수작</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2014</div>
+    <ul>
+      <li>군산의료원 장례식장 현상공모 우수작</li>
+      <li>삼례주민센터 현상공모 우수작</li>
+      <li>전주시 효자도서관 현상공모 당선</li>
+    </ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2013</div>
+    <ul><li>전북혁신고등학교 현상공모 당선</li></ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2009</div>
+    <ul><li>무주전통공예 시연체험관 · 최북미술관 · 눌인문학관 현상공모 당선</li></ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">2007</div>
+    <ul><li>전북대학교 BIC도서관 현상공모 당선</li></ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">1999</div>
+    <ul><li>임실군청사 현상공모 당선</li></ul>
+  </div>
+  <div class="award-year">
+    <div class="yr">1997</div>
+    <ul><li>전라북도 중소기업지원센터 현상공모 당선</li></ul>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 (주)율그룹건축사사무소. All rights reserved.
+</footer>
+
+</body>
+</html>
