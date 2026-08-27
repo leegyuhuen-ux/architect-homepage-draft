@@ -78,6 +78,36 @@
   .work-category { font-size: 0.8rem; color: var(--accent); margin-bottom: 6px; }
   .work-title { font-size: 1.1rem; font-family: 'Noto Serif KR', serif; }
 
+  .section h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); margin: 80px 0 12px; }
+  .section .section-sub { color: var(--muted); margin-bottom: 32px; }
+
+  .work-year {
+    display: flex;
+    gap: 32px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .work-year:last-child { border-bottom: none; }
+  .work-year .yr {
+    min-width: 70px;
+    flex-shrink: 0;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .work-year ul { list-style: none; font-size: 0.92rem; }
+  .work-year li { margin-bottom: 8px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .work-year li:last-child { margin-bottom: 0; }
+  .work-year .tag {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: var(--accent);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 1px 10px;
+    height: fit-content;
+  }
+
   footer {
     padding: 32px 48px;
     text-align: center;
@@ -97,6 +127,8 @@
       grid-column: auto; grid-row: auto;
     }
     .work-thumb { flex: none; aspect-ratio: 4 / 3; min-height: 0; }
+    .work-year { gap: 20px; }
+    .work-year li { flex-direction: column; gap: 4px; }
   }
 </style>
 </head>
@@ -137,6 +169,57 @@
       <div class="work-title">전주효자도서관</div>
     </a>
   </div>
+
+  <h2>최근 설계 실적</h2>
+  <p class="section-sub">2023년부터 현재까지 진행한 대표 설계 용역입니다.</p>
+
+  <div class="work-year">
+    <div class="yr">2026</div>
+    <ul>
+      <li><span class="tag">스마트팜·온실</span>거창군 스마트농업육성사업 세부설계 용역</li>
+      <li><span class="tag">스마트팜·온실</span>남원 농생명산업지구 교육실습장 조성사업 실시설계 용역</li>
+      <li><span class="tag">자동차관련시설</span>전주 BMW 정비공장 1층 증축 설계용역</li>
+      <li><span class="tag">단독주택</span>호성동1가 단독주택 설계용역</li>
+      <li><span class="tag">스마트팜·온실</span>서산시 지역특화 임대형 스마트팜 세부설계 용역</li>
+      <li><span class="tag">스마트팜·온실</span>금산군 스마트농업 육성지구 조성사업 기본계획 수립 용역</li>
+      <li><span class="tag">스마트팜·온실</span>안동시 스마트농업 육성지구 조성사업 기본계획 및 세부설계 용역</li>
+    </ul>
+  </div>
+  <div class="work-year">
+    <div class="yr">2025</div>
+    <ul>
+      <li><span class="tag">스마트팜·온실</span>홍성 충남형 스마트팜 복합단지 조성사업(서부) 기본 및 실시설계 용역</li>
+      <li><span class="tag">종교시설</span>천주교 전주교구 팔복동성당 신축공사 설계용역</li>
+      <li><span class="tag">동물및식물관련시설</span>경기도농업기술원 디지털농업 유리온실 건립 설계</li>
+      <li><span class="tag">창고시설</span>태전약품판매 물류센터 건립 설계변경 용역</li>
+      <li><span class="tag">근린생활시설</span>순창군 남계리 근린생활시설 신축공사 설계용역</li>
+    </ul>
+  </div>
+  <div class="work-year">
+    <div class="yr">2024</div>
+    <ul>
+      <li><span class="tag">스마트팜·온실</span>봉화 임대형 스마트팜 단지 조성사업 실시설계 용역</li>
+      <li><span class="tag">교육연구시설</span>군산중앙여고 체육관 전면보수 설계 용역</li>
+      <li><span class="tag">공장시설</span>일진제강 재가열로 기초시공 설계용역</li>
+      <li><span class="tag">단독주택</span>여의동2가 단독주택 신축공사 설계용역</li>
+      <li><span class="tag">단독주택</span>만성동 단독주택 신축 설계용역</li>
+      <li><span class="tag">교육연구시설</span>김제여고 후관동 그린스마트스쿨 개축공사 설계용역</li>
+      <li><span class="tag">스마트팜·온실</span>무주 고랭지 청년 임대형 스마트팜 단지 온실 실시설계용역</li>
+      <li><span class="tag">스마트팜·온실</span>진안고원 스마트팜 기본계획 수립 및 실시설계용역</li>
+    </ul>
+  </div>
+  <div class="work-year">
+    <div class="yr">2023</div>
+    <ul>
+      <li><span class="tag">노유자시설</span>무주 반디나래지원센터 조성사업 설계용역</li>
+      <li><span class="tag">동물및식물관련시설</span>전주동물원 재규어사 환경개선공사 실시설계용역</li>
+      <li><span class="tag">근린생활시설</span>태평동 근린생활시설 신축공사 설계용역</li>
+      <li><span class="tag">교육연구시설</span>군산대야초등학교 후관동 그린스마트스쿨 개축 설계</li>
+      <li><span class="tag">근린생활시설·업무시설</span>부안격포항 권역단위 인구활력 연계사업 설계용역</li>
+    </ul>
+  </div>
+
+  <p style="margin-top: 40px;"><a href="history.html" style="color: var(--accent); border-bottom: 1px solid var(--accent);">연혁 및 현상설계 당선 현황 자세히 보기 →</a></p>
 </section>
 
 <footer>

@@ -69,6 +69,43 @@
 
   .more-link { color: var(--accent); border-bottom: 1px solid var(--accent); }
 
+  .section h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); margin: 64px 0 28px; }
+  .section h2:first-of-type { margin-top: 0; }
+
+  .services {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 24px;
+  }
+  .services li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+
+  .groups { color: var(--muted); font-size: 0.92rem; }
+
+  .person-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .person-card { border-top: 1px solid var(--line); padding-top: 24px; }
+  .person-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #d8d2c4, #a9967a);
+  }
+  .person-card h3 { font-size: 1.3rem; margin-bottom: 4px; }
+  .person-role { font-size: 0.85rem; color: var(--accent); margin-bottom: 20px; }
+  .person-card dt { font-size: 0.8rem; color: var(--muted); margin-top: 16px; margin-bottom: 4px; }
+  .person-card dt:first-of-type { margin-top: 0; }
+  .person-card dd { font-size: 0.92rem; }
+  .person-card dd ul { padding-left: 18px; margin-top: 2px; }
+
   footer {
     padding: 32px 48px;
     text-align: center;
@@ -83,6 +120,8 @@
     .nav ul a { white-space: nowrap; }
     .page-header { padding: 72px 24px 48px; }
     .section { padding: 0 24px 72px; }
+    .services { grid-template-columns: 1fr 1fr; }
+    .person-grid { grid-template-columns: 1fr; gap: 32px; }
   }
 </style>
 </head>
@@ -106,21 +145,94 @@
 
 <section class="section">
   <p class="intro">1992년 개소 이래 사업성 검토에서 단지계획, 실시설계까지 관공서·민간사업 전반의 업무를 수행해 왔습니다. 새로운 시대의 사고와 기술력을 갖추어, 오늘이 아닌 내일을 위한 건축사사무소가 되고자 합니다.</p>
+
+  <h2>사무소 개요</h2>
   <dl class="profile">
     <div>
-      <dt>대표</dt>
-      <dd>강문수 · 김희순</dd>
+      <dt>명칭</dt>
+      <dd>(주)율(律)그룹건축사사무소</dd>
     </div>
     <div>
-      <dt>건축사 등록번호</dt>
-      <dd>제5102호 · 제4245호</dd>
-    </div>
-    <div>
-      <dt>설립</dt>
+      <dt>개설</dt>
       <dd>1992년 10월</dd>
     </div>
+    <div>
+      <dt>등록건축사</dt>
+      <dd>강문수 (제5102호) · 김희순 (제4245호)</dd>
+    </div>
+    <div>
+      <dt>주소</dt>
+      <dd>전북 전주시 완산구 홍산남로 82, 402호</dd>
+    </div>
+    <div>
+      <dt>전화 / 팩스</dt>
+      <dd>063-226-2121 / 063-226-2125</dd>
+    </div>
+    <div>
+      <dt>이메일</dt>
+      <dd>yularc1@daum.net</dd>
+    </div>
   </dl>
-  <p><a class="more-link" href="history.html">연혁 및 대표이사 소개, 수상 이력 자세히 보기 →</a></p>
+  <p class="groups"><strong style="color: var(--ink);">가입 단체</strong> — 대한건축사협회 · 대한건축학회 · 한국건축가협회 · 한국건설기술인협회 · 한국여성건축가협회</p>
+
+  <h2>주요 업무</h2>
+  <ul class="services">
+    <li>건축계획</li>
+    <li>건축설계 및 감리</li>
+    <li>건설사업관리</li>
+    <li>종합배치계획</li>
+    <li>단지계획</li>
+    <li>도시설계</li>
+    <li>사업성 검토 및 자문</li>
+    <li>건축물 관리점검</li>
+    <li>연구개발</li>
+  </ul>
+
+  <h2>대표이사 소개</h2>
+  <div class="person-grid">
+    <div class="person-card">
+      <div class="person-photo"></div>
+      <h3>강문수</h3>
+      <div class="person-role">대표이사 · 건축사 (제5102호)</div>
+      <dt>학력</dt>
+      <dd>전북대학교 건축공학과 졸업 (1983) · 전북대학교 환경대학원 수료 (1995)</dd>
+      <dt>경력</dt>
+      <dd>삼아건축사사무소 설계부 → 종합건축사사무소 진.원.홍인 → (주)율그룹건축사사무소 (1995~현재)</dd>
+      <dt>자격</dt>
+      <dd>건축사 (1992) · 건축기사1급 (1982)</dd>
+      <dt>기타</dt>
+      <dd>
+        <ul>
+          <li>(現) 전주시 건축위원회 위원</li>
+          <li>(現) LH공사 전북본부 매입심의위원회 위원</li>
+          <li>전북대학교 건축공학과 총동문회장</li>
+          <li>전주시 정책 자문위원 · 도시분쟁조정위원회 위원</li>
+        </ul>
+      </dd>
+    </div>
+    <div class="person-card">
+      <div class="person-photo"></div>
+      <h3>김희순</h3>
+      <div class="person-role">대표이사 · 건축사 (제4245호)</div>
+      <dt>학력</dt>
+      <dd>전북대학교 건축공학과 졸업 (1978) · 전북대학교 환경대학원 석사 (1996)</dd>
+      <dt>경력</dt>
+      <dd>대한주택공사 단지계획부 등 → (주)율그룹건축사사무소 (1992~현재, 2001~2008 건축사사무소 메가피아)</dd>
+      <dt>자격</dt>
+      <dd>건축사 (1990) · 건축기사1급 (1977)</dd>
+      <dt>기타</dt>
+      <dd>
+        <ul>
+          <li>(現) 전주시 경관위원회 위원</li>
+          <li>(現) 익산시 공공건축심의위원회 위원</li>
+          <li>전북여성건축가회 명예회장</li>
+          <li>전라북도 공공건축가 · 전주시 공공건축가</li>
+        </ul>
+      </dd>
+    </div>
+  </div>
+
+  <p style="margin-top: 48px;"><a class="more-link" href="history.html">연혁 및 수상 이력 자세히 보기 →</a></p>
 </section>
 
 <footer>
