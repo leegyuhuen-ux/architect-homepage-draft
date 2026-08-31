@@ -56,18 +56,6 @@
     background: linear-gradient(180deg, rgba(20,18,15,0.35) 0%, rgba(20,18,15,0.65) 100%),
                 linear-gradient(135deg, #3a362e 0%, #6b6455 45%, #a9967a 100%);
   }
-  .hero-inner { animation: fadeUp 0.9s ease both; }
-  .hero-inner h1 {
-    font-size: clamp(2.8rem, 8vw, 5.6rem);
-    letter-spacing: -0.01em;
-    margin-bottom: 20px;
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to { opacity: 1; transform: none; }
-  }
-
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
 
@@ -172,11 +160,7 @@
   </ul>
 </header>
 
-<section id="home" class="hero">
-  <div class="hero-inner">
-    <h1>오늘이 아닌 내일을 위한 건축</h1>
-  </div>
-</section>
+<section id="home" class="hero"></section>
 
 <section id="about" class="section about reveal">
   <div class="section-label">About</div>
