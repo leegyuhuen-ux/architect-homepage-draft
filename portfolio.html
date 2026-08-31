@@ -108,6 +108,32 @@
     height: fit-content;
   }
 
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .filter-btn {
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover { color: var(--ink); border-color: var(--muted); }
+  .filter-btn.active {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .work-year.hidden, .work-year li.hidden { display: none; }
+  .filter-empty { color: var(--muted); font-size: 0.92rem; }
+
   footer {
     padding: 32px 48px;
     text-align: center;
@@ -141,7 +167,7 @@
     <li><a href="about.html">소개</a></li>
     <li><a href="portfolio.html" class="current">포트폴리오</a></li>
     <li><a href="history.html">연혁·실적</a></li>
-    <li><a href="index.html#contact">연락처</a></li>
+    <li><a href="location.html">오시는 길</a></li>
   </ul>
 </header>
 
@@ -173,49 +199,59 @@
   <h2>최근 설계 실적</h2>
   <p class="section-sub">2023년부터 현재까지 진행한 대표 설계 용역입니다.</p>
 
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">전체</button>
+    <button class="filter-btn" data-filter="smartfarm">스마트팜·온실</button>
+    <button class="filter-btn" data-filter="edu">교육연구시설</button>
+    <button class="filter-btn" data-filter="neighborhood">근린생활시설</button>
+    <button class="filter-btn" data-filter="house">주택</button>
+    <button class="filter-btn" data-filter="religion">종교시설</button>
+    <button class="filter-btn" data-filter="etc">기타</button>
+  </div>
+
   <div class="work-year">
     <div class="yr">2026</div>
     <ul>
-      <li><span class="tag">스마트팜·온실</span>거창군 스마트농업육성사업 세부설계 용역</li>
-      <li><span class="tag">스마트팜·온실</span>남원 농생명산업지구 교육실습장 조성사업 실시설계 용역</li>
-      <li><span class="tag">자동차관련시설</span>전주 BMW 정비공장 1층 증축 설계용역</li>
-      <li><span class="tag">단독주택</span>호성동1가 단독주택 설계용역</li>
-      <li><span class="tag">스마트팜·온실</span>서산시 지역특화 임대형 스마트팜 세부설계 용역</li>
-      <li><span class="tag">스마트팜·온실</span>금산군 스마트농업 육성지구 조성사업 기본계획 수립 용역</li>
-      <li><span class="tag">스마트팜·온실</span>안동시 스마트농업 육성지구 조성사업 기본계획 및 세부설계 용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>거창군 스마트농업육성사업 세부설계 용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>남원 농생명산업지구 교육실습장 조성사업 실시설계 용역</li>
+      <li data-cat="etc"><span class="tag">자동차관련시설</span>전주 BMW 정비공장 1층 증축 설계용역</li>
+      <li data-cat="house"><span class="tag">단독주택</span>호성동1가 단독주택 설계용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>서산시 지역특화 임대형 스마트팜 세부설계 용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>금산군 스마트농업 육성지구 조성사업 기본계획 수립 용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>안동시 스마트농업 육성지구 조성사업 기본계획 및 세부설계 용역</li>
     </ul>
   </div>
   <div class="work-year">
     <div class="yr">2025</div>
     <ul>
-      <li><span class="tag">스마트팜·온실</span>홍성 충남형 스마트팜 복합단지 조성사업(서부) 기본 및 실시설계 용역</li>
-      <li><span class="tag">종교시설</span>천주교 전주교구 팔복동성당 신축공사 설계용역</li>
-      <li><span class="tag">동물및식물관련시설</span>경기도농업기술원 디지털농업 유리온실 건립 설계</li>
-      <li><span class="tag">창고시설</span>태전약품판매 물류센터 건립 설계변경 용역</li>
-      <li><span class="tag">근린생활시설</span>순창군 남계리 근린생활시설 신축공사 설계용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>홍성 충남형 스마트팜 복합단지 조성사업(서부) 기본 및 실시설계 용역</li>
+      <li data-cat="religion"><span class="tag">종교시설</span>천주교 전주교구 팔복동성당 신축공사 설계용역</li>
+      <li data-cat="etc"><span class="tag">동물및식물관련시설</span>경기도농업기술원 디지털농업 유리온실 건립 설계</li>
+      <li data-cat="etc"><span class="tag">창고시설</span>태전약품판매 물류센터 건립 설계변경 용역</li>
+      <li data-cat="neighborhood"><span class="tag">근린생활시설</span>순창군 남계리 근린생활시설 신축공사 설계용역</li>
     </ul>
   </div>
   <div class="work-year">
     <div class="yr">2024</div>
     <ul>
-      <li><span class="tag">스마트팜·온실</span>봉화 임대형 스마트팜 단지 조성사업 실시설계 용역</li>
-      <li><span class="tag">교육연구시설</span>군산중앙여고 체육관 전면보수 설계 용역</li>
-      <li><span class="tag">공장시설</span>일진제강 재가열로 기초시공 설계용역</li>
-      <li><span class="tag">단독주택</span>여의동2가 단독주택 신축공사 설계용역</li>
-      <li><span class="tag">단독주택</span>만성동 단독주택 신축 설계용역</li>
-      <li><span class="tag">교육연구시설</span>김제여고 후관동 그린스마트스쿨 개축공사 설계용역</li>
-      <li><span class="tag">스마트팜·온실</span>무주 고랭지 청년 임대형 스마트팜 단지 온실 실시설계용역</li>
-      <li><span class="tag">스마트팜·온실</span>진안고원 스마트팜 기본계획 수립 및 실시설계용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>봉화 임대형 스마트팜 단지 조성사업 실시설계 용역</li>
+      <li data-cat="edu"><span class="tag">교육연구시설</span>군산중앙여고 체육관 전면보수 설계 용역</li>
+      <li data-cat="etc"><span class="tag">공장시설</span>일진제강 재가열로 기초시공 설계용역</li>
+      <li data-cat="house"><span class="tag">단독주택</span>여의동2가 단독주택 신축공사 설계용역</li>
+      <li data-cat="house"><span class="tag">단독주택</span>만성동 단독주택 신축 설계용역</li>
+      <li data-cat="edu"><span class="tag">교육연구시설</span>김제여고 후관동 그린스마트스쿨 개축공사 설계용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>무주 고랭지 청년 임대형 스마트팜 단지 온실 실시설계용역</li>
+      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>진안고원 스마트팜 기본계획 수립 및 실시설계용역</li>
     </ul>
   </div>
   <div class="work-year">
     <div class="yr">2023</div>
     <ul>
-      <li><span class="tag">노유자시설</span>무주 반디나래지원센터 조성사업 설계용역</li>
-      <li><span class="tag">동물및식물관련시설</span>전주동물원 재규어사 환경개선공사 실시설계용역</li>
-      <li><span class="tag">근린생활시설</span>태평동 근린생활시설 신축공사 설계용역</li>
-      <li><span class="tag">교육연구시설</span>군산대야초등학교 후관동 그린스마트스쿨 개축 설계</li>
-      <li><span class="tag">근린생활시설·업무시설</span>부안격포항 권역단위 인구활력 연계사업 설계용역</li>
+      <li data-cat="etc"><span class="tag">노유자시설</span>무주 반디나래지원센터 조성사업 설계용역</li>
+      <li data-cat="etc"><span class="tag">동물및식물관련시설</span>전주동물원 재규어사 환경개선공사 실시설계용역</li>
+      <li data-cat="neighborhood"><span class="tag">근린생활시설</span>태평동 근린생활시설 신축공사 설계용역</li>
+      <li data-cat="edu"><span class="tag">교육연구시설</span>군산대야초등학교 후관동 그린스마트스쿨 개축 설계</li>
+      <li data-cat="neighborhood"><span class="tag">근린생활시설·업무시설</span>부안격포항 권역단위 인구활력 연계사업 설계용역</li>
     </ul>
   </div>
 
@@ -225,6 +261,29 @@
 <footer>
   &copy; 2026 (주)율그룹건축사사무소. All rights reserved.
 </footer>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const years = document.querySelectorAll('.work-year');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      buttons.forEach((b) => b.classList.toggle('active', b === btn));
+
+      years.forEach((year) => {
+        let visible = 0;
+        year.querySelectorAll('li').forEach((li) => {
+          const match = filter === 'all' || li.dataset.cat === filter;
+          li.classList.toggle('hidden', !match);
+          if (match) visible++;
+        });
+        year.classList.toggle('hidden', visible === 0);
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
