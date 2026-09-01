@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="(주)율그룹건축사사무소 포트폴리오 — 전주 천년 한지관, The May Hotel, 전주효자도서관 등 대표 프로젝트와 최근 설계 실적.">
+<meta name="description" content="(주)율그룹건축사사무소 포트폴리오 — 전주 천년 한지관, The May Hotel, 전주효자도서관 등 수상 프로젝트와 설계·공동주택·감리 실적.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%238a5c33'/><path d='M7 25V13l9-6 9 6v12h-6v-8h-6v8z' fill='%23faf9f7'/></svg>">
 <title>포트폴리오 — (주)율그룹건축사사무소</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
     padding: 24px 48px;
     border-bottom: 1px solid var(--line);
   }
-  .nav .logo { font-family: 'Noto Sans KR', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
+  .nav .logo { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
   .nav ul { display: flex; gap: 32px; list-style: none; font-size: 0.9rem; }
   .nav ul a.current { color: var(--accent); }
 
@@ -56,59 +56,57 @@
   .page-header p { color: var(--muted); max-width: 560px; }
 
   .section { padding: 0 48px 96px; max-width: 1100px; margin: 0 auto; }
+  .section h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); margin-bottom: 12px; }
+  .section-sub { color: var(--muted); margin-bottom: 32px; }
 
   .work-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, minmax(180px, auto));
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    margin-bottom: 96px;
   }
   .work-item { display: flex; flex-direction: column; }
-  .work-item:first-child { grid-column: 1; grid-row: 1 / span 2; }
-  .work-item:nth-child(2) { grid-column: 2; grid-row: 1; }
-  .work-item:nth-child(3) { grid-column: 2; grid-row: 2; }
   .work-thumb {
-    flex: 1 1 auto;
-    min-height: 160px;
+    aspect-ratio: 4 / 3;
     border-radius: 4px;
     margin-bottom: 16px;
     background: linear-gradient(135deg, #d8d2c4, #a9967a);
     overflow: hidden;
     transition: transform 0.3s ease;
   }
+  .work-item:nth-child(2) .work-thumb { background: linear-gradient(135deg, #cfc7b6, #8a7f68); }
+  .work-item:nth-child(3) .work-thumb { background: linear-gradient(135deg, #ddd6c8, #93917a); }
+  .work-item:nth-child(4) .work-thumb { background: linear-gradient(135deg, #d3ccbc, #9c8b6e); }
+  .work-item:nth-child(5) .work-thumb { background: linear-gradient(135deg, #dad3c2, #877c62); }
+  .work-item:nth-child(6) .work-thumb { background: linear-gradient(135deg, #d6cfbe, #a29173); }
   .work-item:hover .work-thumb { transform: scale(1.02); }
   .work-category { font-size: 0.8rem; color: var(--accent); margin-bottom: 6px; }
-  .work-title { font-size: 1.1rem; font-family: 'Noto Sans KR', sans-serif; font-weight: 700; }
+  .work-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+  .work-award { font-size: 0.82rem; color: var(--muted); }
 
-  .section h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); margin: 80px 0 12px; }
-  .section .section-sub { color: var(--muted); margin-bottom: 32px; }
-
-  .work-year {
+  .tabs {
     display: flex;
-    gap: 32px;
-    padding: 18px 0;
+    gap: 4px;
     border-bottom: 1px solid var(--line);
+    margin-bottom: 32px;
+    flex-wrap: wrap;
   }
-  .work-year:last-child { border-bottom: none; }
-  .work-year .yr {
-    min-width: 70px;
-    flex-shrink: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 600;
-    color: var(--accent);
+  .tab-btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--muted);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 18px;
+    margin-bottom: -1px;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
   }
-  .work-year ul { list-style: none; font-size: 0.92rem; }
-  .work-year li { margin-bottom: 8px; display: flex; gap: 10px; flex-wrap: wrap; }
-  .work-year li:last-child { margin-bottom: 0; }
-  .work-year .tag {
-    flex-shrink: 0;
-    font-size: 0.75rem;
-    color: var(--accent);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 1px 10px;
-    height: fit-content;
-  }
+  .tab-btn:hover { color: var(--ink); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-panel.hidden { display: none; }
 
   .filters {
     display: flex;
@@ -133,16 +131,52 @@
     background: var(--accent);
     border-color: var(--accent);
   }
+
+  .work-year {
+    display: flex;
+    gap: 32px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .work-year:last-child { border-bottom: none; }
+  .work-year .yr {
+    min-width: 70px;
+    flex-shrink: 0;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .work-year ul { list-style: none; font-size: 0.92rem; }
+  .work-year li { margin-bottom: 8px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .work-year li:last-child { margin-bottom: 0; }
+  .work-year .tag {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: var(--accent);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 1px 10px;
+    height: fit-content;
+  }
+  .work-year .units { color: var(--muted); font-size: 0.85rem; }
   .work-year.hidden, .work-year li.hidden { display: none; }
-  .filter-empty { color: var(--muted); font-size: 0.92rem; }
+
+  .list-note {
+    margin-top: 32px;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .more-link { color: var(--accent); border-bottom: 1px solid var(--accent); }
 
   footer {
-    padding: 32px 48px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--muted);
+    padding: 40px 48px;
     border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--muted);
   }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-inner strong { color: var(--ink); display: block; margin-bottom: 8px; font-size: 0.92rem; }
+  .footer-inner p { margin-bottom: 3px; }
+  .footer-copy { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
 
   @media (max-width: 720px) {
     .nav { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -150,13 +184,11 @@
     .nav ul a { white-space: nowrap; }
     .page-header { padding: 72px 24px 48px; }
     .section { padding: 0 24px 72px; }
-    .work-grid { grid-template-columns: 1fr; grid-template-rows: none; }
-    .work-item:first-child, .work-item:nth-child(2), .work-item:nth-child(3) {
-      grid-column: auto; grid-row: auto;
-    }
-    .work-thumb { flex: none; aspect-ratio: 4 / 3; min-height: 0; }
+    .work-grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 64px; }
+    .tab-btn { padding: 10px 12px; font-size: 0.88rem; }
     .work-year { gap: 20px; }
     .work-year li { flex-direction: column; gap: 4px; }
+    footer { padding: 32px 24px; }
   }
 </style>
 </head>
@@ -176,105 +208,455 @@
 <div class="page-header">
   <div class="section-label">Portfolio</div>
   <h1>작업</h1>
-  <p>수상 및 대표 프로젝트를 소개합니다.</p>
+  <p>1992년 개소 이래 공공·민간 전반에 걸쳐 설계와 감리를 수행해 왔습니다.</p>
 </div>
 
 <section class="section">
+  <h2>수상 프로젝트</h2>
+  <p class="section-sub">건축문화상 및 지역 건축상을 수상한 대표 작업입니다.</p>
+
   <div class="work-grid">
     <a class="work-item" href="projects/01.html">
       <div class="work-thumb"></div>
       <div class="work-category">문화시설</div>
       <div class="work-title">전주 천년 한지관</div>
+      <div class="work-award">2022 전라북도 건축문화상 대상</div>
     </a>
     <a class="work-item" href="projects/02.html">
       <div class="work-thumb"></div>
       <div class="work-category">숙박시설</div>
       <div class="work-title">The May Hotel</div>
+      <div class="work-award">2021 전라북도 건축문화상</div>
     </a>
     <a class="work-item" href="projects/03.html">
       <div class="work-thumb"></div>
       <div class="work-category">교육시설</div>
       <div class="work-title">전주효자도서관</div>
+      <div class="work-award">2017 전라북도 건축문화상 · 아름다운 건축상</div>
+    </a>
+    <a class="work-item" href="projects/04.html">
+      <div class="work-thumb"></div>
+      <div class="work-category">종교시설</div>
+      <div class="work-title">바울센터</div>
+      <div class="work-award">2014 전라북도 아름다운건축상 금상</div>
+    </a>
+    <a class="work-item" href="projects/05.html">
+      <div class="work-thumb"></div>
+      <div class="work-category">군산</div>
+      <div class="work-title">고우당</div>
+      <div class="work-award">2013 군산시 건축문화상 금상</div>
+    </a>
+    <a class="work-item" href="projects/06.html">
+      <div class="work-thumb"></div>
+      <div class="work-category">교육시설</div>
+      <div class="work-title">전북대학교 공대 9호관</div>
+      <div class="work-award">2002 전주시 건축상 금상</div>
     </a>
   </div>
 
-  <h2>최근 설계 실적</h2>
-  <p class="section-sub">2023년부터 현재까지 진행한 대표 설계 용역입니다.</p>
+  <h2>주요 실적</h2>
+  <p class="section-sub">설계 · 공동주택 · 감리 부문별 실적입니다.</p>
 
-  <div class="filters">
-    <button class="filter-btn active" data-filter="all">전체</button>
-    <button class="filter-btn" data-filter="smartfarm">스마트팜·온실</button>
-    <button class="filter-btn" data-filter="edu">교육연구시설</button>
-    <button class="filter-btn" data-filter="neighborhood">근린생활시설</button>
-    <button class="filter-btn" data-filter="house">주택</button>
-    <button class="filter-btn" data-filter="religion">종교시설</button>
-    <button class="filter-btn" data-filter="etc">기타</button>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="design">설계</button>
+    <button class="tab-btn" data-tab="housing">공동주택</button>
+    <button class="tab-btn" data-tab="supervision">감리</button>
   </div>
 
-  <div class="work-year">
-    <div class="yr">2026</div>
-    <ul>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>거창군 스마트농업육성사업 세부설계 용역</li>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>남원 농생명산업지구 교육실습장 조성사업 실시설계 용역</li>
-      <li data-cat="etc"><span class="tag">자동차관련시설</span>전주 BMW 정비공장 1층 증축 설계용역</li>
-      <li data-cat="house"><span class="tag">단독주택</span>호성동1가 단독주택 설계용역</li>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>서산시 지역특화 임대형 스마트팜 세부설계 용역</li>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>금산군 스마트농업 육성지구 조성사업 기본계획 수립 용역</li>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>안동시 스마트농업 육성지구 조성사업 기본계획 및 세부설계 용역</li>
-    </ul>
-  </div>
-  <div class="work-year">
-    <div class="yr">2025</div>
-    <ul>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>홍성 충남형 스마트팜 복합단지 조성사업(서부) 기본 및 실시설계 용역</li>
-      <li data-cat="religion"><span class="tag">종교시설</span>천주교 전주교구 팔복동성당 신축공사 설계용역</li>
-      <li data-cat="etc"><span class="tag">동물및식물관련시설</span>경기도농업기술원 디지털농업 유리온실 건립 설계</li>
-      <li data-cat="etc"><span class="tag">창고시설</span>태전약품판매 물류센터 건립 설계변경 용역</li>
-      <li data-cat="neighborhood"><span class="tag">근린생활시설</span>순창군 남계리 근린생활시설 신축공사 설계용역</li>
-    </ul>
-  </div>
-  <div class="work-year">
-    <div class="yr">2024</div>
-    <ul>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>봉화 임대형 스마트팜 단지 조성사업 실시설계 용역</li>
-      <li data-cat="edu"><span class="tag">교육연구시설</span>군산중앙여고 체육관 전면보수 설계 용역</li>
-      <li data-cat="etc"><span class="tag">공장시설</span>일진제강 재가열로 기초시공 설계용역</li>
-      <li data-cat="house"><span class="tag">단독주택</span>여의동2가 단독주택 신축공사 설계용역</li>
-      <li data-cat="house"><span class="tag">단독주택</span>만성동 단독주택 신축 설계용역</li>
-      <li data-cat="edu"><span class="tag">교육연구시설</span>김제여고 후관동 그린스마트스쿨 개축공사 설계용역</li>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>무주 고랭지 청년 임대형 스마트팜 단지 온실 실시설계용역</li>
-      <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>진안고원 스마트팜 기본계획 수립 및 실시설계용역</li>
-    </ul>
-  </div>
-  <div class="work-year">
-    <div class="yr">2023</div>
-    <ul>
-      <li data-cat="etc"><span class="tag">노유자시설</span>무주 반디나래지원센터 조성사업 설계용역</li>
-      <li data-cat="etc"><span class="tag">동물및식물관련시설</span>전주동물원 재규어사 환경개선공사 실시설계용역</li>
-      <li data-cat="neighborhood"><span class="tag">근린생활시설</span>태평동 근린생활시설 신축공사 설계용역</li>
-      <li data-cat="edu"><span class="tag">교육연구시설</span>군산대야초등학교 후관동 그린스마트스쿨 개축 설계</li>
-      <li data-cat="neighborhood"><span class="tag">근린생활시설·업무시설</span>부안격포항 권역단위 인구활력 연계사업 설계용역</li>
-    </ul>
+  <!-- 설계 -->
+  <div class="tab-panel" id="tab-design">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="smartfarm">스마트팜·온실</button>
+      <button class="filter-btn" data-filter="edu">교육연구시설</button>
+      <button class="filter-btn" data-filter="culture">문화·집회시설</button>
+      <button class="filter-btn" data-filter="public">공공업무시설</button>
+      <button class="filter-btn" data-filter="neighborhood">근린생활시설</button>
+      <button class="filter-btn" data-filter="house">주택</button>
+      <button class="filter-btn" data-filter="religion">종교시설</button>
+      <button class="filter-btn" data-filter="etc">기타</button>
+    </div>
+
+    <div class="work-year">
+      <div class="yr">2026</div>
+      <ul>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>거창군 스마트농업육성사업 세부설계 용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>남원 농생명산업지구 교육실습장 조성사업 실시설계 용역</li>
+        <li data-cat="etc"><span class="tag">자동차관련시설</span>전주 BMW 정비공장 1층 증축 설계용역</li>
+        <li data-cat="house"><span class="tag">단독주택</span>호성동1가 단독주택 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>서산시 지역특화 임대형 스마트팜 세부설계 용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>금산군 스마트농업 육성지구 조성사업 기본계획 수립 용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>안동시 스마트농업 육성지구 조성사업 기본계획 및 세부설계 용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2025</div>
+      <ul>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>홍성 충남형 스마트팜 복합단지 조성사업(서부) 기본 및 실시설계 용역</li>
+        <li data-cat="religion"><span class="tag">종교시설</span>천주교 전주교구 팔복동성당 신축공사 설계용역</li>
+        <li data-cat="etc"><span class="tag">동물및식물관련시설</span>경기도농업기술원 디지털농업 유리온실 건립 설계</li>
+        <li data-cat="etc"><span class="tag">창고시설</span>태전약품판매 물류센터 건립 설계변경 용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>순창군 남계리 근린생활시설 신축공사 설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2024</div>
+      <ul>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>봉화 임대형 스마트팜 단지 조성사업 실시설계 용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>장수 청년농업인 유치 임대형 스마트팜 건립사업 세부설계 용역</li>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>군산중앙여고 체육관 전면보수 설계 용역</li>
+        <li data-cat="etc"><span class="tag">공장시설</span>일진제강 재가열로 기초시공 설계용역</li>
+        <li data-cat="house"><span class="tag">단독주택</span>여의동2가 단독주택 신축공사 설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>군산 나포 관광농원 신축공사 설계용역</li>
+        <li data-cat="house"><span class="tag">단독주택</span>만성동 단독주택 신축 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>예산 충남형 스마트팜 복합단지(삽교) 조성사업 실시설계용역</li>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>김제여고 후관동 그린스마트스쿨 개축공사 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>무주 고랭지 청년 임대형 스마트팜 단지 온실 실시설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>진안고원 스마트팜 기본계획 수립 및 실시설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2023</div>
+      <ul>
+        <li data-cat="etc"><span class="tag">노유자시설</span>무주 반디나래지원센터 조성사업 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>장수 지역특화 임대형스마트팜 조성사업 설계용역</li>
+        <li data-cat="etc"><span class="tag">동물및식물관련시설</span>전주동물원 재규어사 환경개선공사 실시설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>태평동 근린생활시설 신축공사 설계용역</li>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>군산대야초등학교 후관동 그린스마트스쿨 개축 설계</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>무주군 스마트팜 단지조성 기본계획 수립용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활·업무시설</span>부안격포항 권역단위 인구활력 연계사업 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>김제 지역특화 임대형스마트팜 조성사업 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>장수 동부권 임대형 수직농장 실증사업 조성공사 설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2022</div>
+      <ul>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>전주 중인동 근린생활시설 증축 설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>전주 태평동 근린생활시설 신축 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>장수군 임대형스마트팜 기본계획 수립용역</li>
+        <li data-cat="culture"><span class="tag">문화및집회시설</span>남원 유곡리와 두락리 고분군 홍보관 건립 설계용역</li>
+        <li data-cat="etc"><span class="tag">숙박시설</span>팔복동 산업단지 관광호텔 증축공사 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">온실</span>설천면 도시재생뉴딜사업 화훼온실 세부설계 용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>경북상주 기존농업인 임대형스마트팜 온실설계 용역</li>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>용산초 그린스마트 미래학교 증개축 설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2021</div>
+      <ul>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>충북제천 바이오 및 임대형 스마트팜 조성사업 기본 및 세부설계 용역</li>
+        <li data-cat="etc"><span class="tag">창고시설</span>태전약품판매 물류센터 건립 설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>전주 평화동 근린생활시설 신축 설계용역</li>
+        <li data-cat="etc"><span class="tag">창고시설</span>(유)광주태전 물류센터 건립 설계용역</li>
+        <li data-cat="smartfarm"><span class="tag">스마트팜·온실</span>논산 스마트농업 복합단지조성사업 세부설계 용역</li>
+        <li data-cat="etc"><span class="tag">기타</span>새만금 묘목장 입출하장 조성 실시설계 용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2020</div>
+      <ul>
+        <li data-cat="house"><span class="tag">단독주택</span>완주군 경천면 용복리 단독주택 실시설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>풍산면 기초생활거점사업 세부설계 용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>진북동 근린생활시설(의원) 건축설계 용역</li>
+        <li data-cat="etc"><span class="tag">방송통신시설</span>CBS 전북방송 사무동 리모델링 설계용역</li>
+        <li data-cat="house"><span class="tag">단독주택</span>김제시 금산면 원평리 단독주택 신축공사</li>
+        <li data-cat="etc"><span class="tag">자원순환관련시설</span>완주 봉동읍 구암리 폐기물처리시설 증축공사</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>모양성마을 울력터 건립사업 통합설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2019</div>
+      <ul>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>고창중 본관 개축공사 실시설계용역</li>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>경북상주 스마트팜혁신밸리 핵심시설 건축설계 용역</li>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>전북 스마트팜 혁신밸리 조성사업 핵심시설 설계용역</li>
+        <li data-cat="etc"><span class="tag">폐기물처리시설</span>전주 폐형광등 선별시설 신설공사 설계용역</li>
+        <li data-cat="culture"><span class="tag">문화및집회시설</span>한국소리문화의전당 시설개선공사 실시설계 용역</li>
+        <li data-cat="culture"><span class="tag">문화및집회시설</span>전통한지 생산시설 조성사업 설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2018</div>
+      <ul>
+        <li data-cat="culture"><span class="tag">문화및집회시설</span>미륵사지 관광지 조성사업 설계용역</li>
+        <li data-cat="culture"><span class="tag">문화및집회시설</span>김제 농악전통체험관 건립공사 설계용역</li>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>전주시 업사이클센터 리모델링 및 증축공사 설계용역</li>
+        <li data-cat="etc"><span class="tag">공장</span>한솔케미칼 증축공사 설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>산서면 농촌중심지활성화사업 건축설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2017</div>
+      <ul>
+        <li data-cat="etc"><span class="tag">공장</span>남원 이너뷰티식품가공시설 신축공사 설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활·수련시설</span>고창군 흥덕면 농촌중심지(선도지구) 하모니센터 신축공사 설계용역</li>
+        <li data-cat="public"><span class="tag">공공업무시설</span>전주시 아동청소년센터 건립공사 설계용역</li>
+        <li data-cat="public"><span class="tag">공공업무시설</span>전라북도 전산통합센터 설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>대전 유성구 봉명동 근린생활시설 신축공사 설계용역</li>
+        <li data-cat="religion"><span class="tag">종교시설</span>익산 성글라라수도원 증축공사 설계용역</li>
+        <li data-cat="house"><span class="tag">단독주택</span>전주 효자동 단독주택 신축공사 설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2016</div>
+      <ul>
+        <li data-cat="public"><span class="tag">업무시설</span>군산 농업인회관 신축공사 설계용역</li>
+        <li data-cat="public"><span class="tag">공공업무시설</span>남원시 청사(의회) 신축공사 설계용역</li>
+        <li data-cat="edu"><span class="tag">교육연구시설</span>전북대학교 법학전문대학원 건립공사 설계용역</li>
+        <li data-cat="neighborhood"><span class="tag">근린생활시설</span>전주시 완산구 교동 근린생활시설 증축공사</li>
+        <li data-cat="etc"><span class="tag">창고시설</span>동진강 생산유통단지 실시설계용역</li>
+      </ul>
+    </div>
+
+    <p class="list-note">※ 2016년 이전 설계 실적(1992~2015)은 별도 문의 시 제공해 드립니다.</p>
   </div>
 
-  <p style="margin-top: 40px;"><a href="history.html" style="color: var(--accent); border-bottom: 1px solid var(--accent);">연혁 및 현상설계 당선 현황 자세히 보기 →</a></p>
+  <!-- 공동주택 -->
+  <div class="tab-panel hidden" id="tab-housing">
+    <p class="section-sub">재개발·재건축 정비사업과 대규모 공동주택 단지 설계를 30년간 수행해 왔습니다.</p>
+
+    <div class="work-year">
+      <div class="yr">2025</div>
+      <ul><li>전주 병무청인근구역 재개발정비사업 설계용역</li></ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2021</div>
+      <ul><li>전주 호성동2가(초포지구) 공동주택 사업승인 용역</li></ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2020</div>
+      <ul><li>전주 에코시티 15블럭 공동주택 사업승인 용역</li></ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2018</div>
+      <ul>
+        <li>익산 청솔아파트 주택재건축 정비사업 설계용역 <span class="units">395세대</span></li>
+        <li>전주 에코시티 3블럭 기업형 임대아파트 사업승인 용역</li>
+        <li>전주 에코시티 8블럭 기업형 임대아파트 사업승인 용역</li>
+        <li>전주 에코시티 14블럭 기업형 임대아파트 사업승인 용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2017</div>
+      <ul>
+        <li>전주 에코시티 11블럭 기업형 임대아파트 사업승인 용역</li>
+        <li>전주 에코시티 13블럭 기업형 임대아파트 사업승인 용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2016</div>
+      <ul>
+        <li>익산시 부송동 아파트 신축공사 1·2단지 설계용역 <span class="units">256세대</span></li>
+        <li>전주 덕진구 에코시티 9블럭 설계용역 <span class="units">490세대</span></li>
+        <li>전주 삼천쌍용 주택재건축 정비사업 설계용역 <span class="units">499세대</span></li>
+        <li>전주 삼천주공3단지 주택재건축 정비사업 <span class="units">630세대</span></li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2015</div>
+      <ul>
+        <li>전주 효자구역 주택재개발 정비사업 설계용역 <span class="units">1,248세대</span></li>
+        <li>전주 덕진구 에코시티 6블럭 설계용역 <span class="units">640세대</span></li>
+        <li>전주 태평1구역 주택재개발 정비사업 설계용역 <span class="units">1,312세대</span></li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2014</div>
+      <ul><li>전주 송천동 KCC 스위첸 아파트 신축공사</li></ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2013</div>
+      <ul>
+        <li>군산 해망동 보금자리주택 건립공사 턴키설계용역</li>
+        <li>정읍 연지아파트 주택재건축정비사업 설계변경 용역</li>
+        <li>전주시 서신동 감나무골 주택재개발 정비사업 <span class="units">1,986세대</span></li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2012</div>
+      <ul>
+        <li>송천동 한라비발디 아파트 1·2단지 신축공사 설계용역</li>
+        <li>다가동아파트 신축공사 설계용역</li>
+        <li>익산 어양아파트 주택재건축정비사업 설계변경 용역</li>
+        <li>효자동 주상복합 신축공사 설계용역</li>
+        <li>우진·태하 주택재건축 정비사업 실시설계용역 <span class="units">326세대</span></li>
+        <li>군산시 미룡동 아파트 신축공사 건축설계용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2011</div>
+      <ul>
+        <li>전주·완주혁신도시 A-14블럭 보금자리주택 건설공사 설계용역</li>
+        <li>전주·완주혁신도시 B2블럭 우미아파트 설계용역</li>
+        <li>송천동 한라비발디 1·2단지 아파트 사업승인변경용역</li>
+        <li>송천동 제일 주택조합 아파트 사업승인변경용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2010</div>
+      <ul><li>태평지구 주택재개발 정비사업 기본설계용역</li></ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2008</div>
+      <ul>
+        <li>군산 나운 주공아파트 3단지 주택재건축 정비사업 설계용역</li>
+        <li>익산 어양아파트 주택재건축 정비사업 설계용역 <span class="units">1,107세대</span></li>
+        <li>효자구역 주택재개발 정비사업 기본설계 용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2006</div>
+      <ul>
+        <li>정읍 연지동 재건축 설계용역 <span class="units">821세대</span></li>
+        <li>중화산동 옥성아파트 신축공사 설계용역 <span class="units">150세대</span></li>
+        <li>군산 산북동 the# 아파트 신축공사 설계용역</li>
+        <li>정읍 상동 수목토 아파트 신축공사 설계용역 <span class="units">419세대</span></li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2005</div>
+      <ul><li>효자동 the# 2차 아파트 신축공사 설계용역 <span class="units">888세대</span></li></ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2004</div>
+      <ul><li>송천동 GS 자이 아파트 신축공사 설계용역 <span class="units">448세대</span></li></ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2003</div>
+      <ul>
+        <li>효자동 the# 1차 아파트 신축공사 설계용역 <span class="units">888세대</span></li>
+        <li>효자동 엘드수목토 1차 아파트 신축공사 설계용역 <span class="units">419세대</span></li>
+        <li>인후주공 재건축 아파트 설계용역 <span class="units">1,219세대</span></li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">1994</div>
+      <ul>
+        <li>익산 영등동 비사벌 아파트 신축공사 설계 <span class="units">810세대</span></li>
+        <li>전주 서신 제일-비사벌 아파트 설계 <span class="units">510세대</span></li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">1993</div>
+      <ul><li>군산 나운 주공아파트 3공구 신축공사</li></ul>
+    </div>
+  </div>
+
+  <!-- 감리 -->
+  <div class="tab-panel hidden" id="tab-supervision">
+    <p class="section-sub">설계와 함께 공사 감리 업무를 병행 수행하고 있습니다.</p>
+
+    <div class="work-year">
+      <div class="yr">2026</div>
+      <ul><li>무주 고랭지 청년 임대형 스마트팜 단지 조성(육묘장 2동) 건축감리용역</li></ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2025</div>
+      <ul>
+        <li>천주교 전주교구 해월리 피정센터 신축공사 상주감리용역</li>
+        <li>전주 여의동2가 단독주택 신축공사 감리</li>
+        <li>전주 평화동2가 근린생활시설 신축공사 감리</li>
+        <li>전주 안디옥교회 신축공사 상주감리</li>
+        <li>전주 중앙주교좌성당 사제관 신축공사 감리</li>
+        <li>무주 고랭지 청년 임대형 스마트팜 단지 조성(육묘장 1동) 건축감리용역</li>
+        <li>진안 인력양성 스마트팜 온실 공사 감리용역</li>
+        <li>익산 나바위성당 성지문화체험관 건립 건축감리용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2024</div>
+      <ul>
+        <li>전주 서부권 복합복지관 건립사업 건축공사</li>
+        <li>군산 사정동 자동차영업소 및 수리점 신축공사</li>
+        <li>천주교 전주교구 팔복동성당 신축공사</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2023</div>
+      <ul>
+        <li>전주 성덕동 창고시설 재축공사</li>
+        <li>우아동3가 주상복합 신축공사</li>
+        <li>천주교 전주교구 서신성당 사제관 증축공사</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2022</div>
+      <ul>
+        <li>전주 송천동 근생 및 교육연구시설 신축공사</li>
+        <li>금암동 주상복합 신축공사</li>
+        <li>천주교 전주교구 효자4동 성당 신축공사</li>
+        <li>전주 덕진동 다가구주택 및 근린시설 신축공사</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2021</div>
+      <ul>
+        <li>폐형광등 선별시설 증축공사</li>
+        <li>전주 만성동 다가구주택 신축공사</li>
+        <li>장수 천천면 농촌중심지활성화사업 건축감리 용역</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2020</div>
+      <ul>
+        <li>전주 남노송동 근린생활시설 증축공사</li>
+        <li>전주 삼천동 다가구주택 및 근생 신축공사</li>
+        <li>전주 서신동 연립주택 신축공사</li>
+        <li>CBS 전북방송 사옥 리모델링 공사</li>
+        <li>천주교 전주교구 서곡성당 건축공사</li>
+      </ul>
+    </div>
+    <div class="work-year">
+      <div class="yr">2019</div>
+      <ul>
+        <li>전주 금암동 단독주택 및 근생 증축공사</li>
+        <li>전주 인후동 다가구주택 및 근생 신축공사</li>
+        <li>전주 석구동 단독주택 신축공사</li>
+        <li>전주 효자동 근린생활시설 신축공사</li>
+        <li>전주 팔복동 단독다가구주택 신축공사</li>
+        <li>전주 전미동 근린생활시설 신축공사</li>
+        <li>전주 진북동 근린생활시설 증축공사</li>
+      </ul>
+    </div>
+
+    <p class="list-note">※ 2018년 이전 감리 실적(1994~2018)은 별도 문의 시 제공해 드립니다.</p>
+  </div>
+
+  <p style="margin-top: 48px;"><a class="more-link" href="history.html">연혁 및 현상설계 당선 현황 보기 →</a></p>
 </section>
 
 <footer>
-  &copy; 2026 (주)율그룹건축사사무소. All rights reserved.
+  <div class="footer-inner">
+    <strong>(주)율그룹건축사사무소</strong>
+    <p>전북특별자치도 전주시 완산구 홍산남로 82, 402호 (효자동3가)</p>
+    <p>TEL 063-226-2121 · FAX 063-226-2125 · yularc1@daum.net</p>
+    <p>사업자등록번호 402-81-19233 · 건축사사무소 등록 제 전북특별자치도-건축사사무소-6호</p>
+    <div class="footer-copy">&copy; 2026 (주)율그룹건축사사무소. All rights reserved.</div>
+  </div>
 </footer>
 
 <script>
-  const buttons = document.querySelectorAll('.filter-btn');
-  const years = document.querySelectorAll('.work-year');
+  // 부문 탭
+  document.querySelectorAll('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach((b) => b.classList.toggle('active', b === btn));
+      document.querySelectorAll('.tab-panel').forEach((p) => {
+        p.classList.toggle('hidden', p.id !== 'tab-' + btn.dataset.tab);
+      });
+    });
+  });
 
-  buttons.forEach((btn) => {
+  // 설계 실적 용도별 필터
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const designYears = document.querySelectorAll('#tab-design .work-year');
+
+  filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
+      filterBtns.forEach((b) => b.classList.toggle('active', b === btn));
 
-      buttons.forEach((b) => b.classList.toggle('active', b === btn));
-
-      years.forEach((year) => {
+      designYears.forEach((year) => {
         let visible = 0;
         year.querySelectorAll('li').forEach((li) => {
           const match = filter === 'all' || li.dataset.cat === filter;

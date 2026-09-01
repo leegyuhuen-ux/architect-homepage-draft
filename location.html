@@ -87,13 +87,58 @@
     color: var(--muted);
   }
 
-  footer {
-    padding: 32px 48px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--muted);
-    border-top: 1px solid var(--line);
+  .inquiry { margin-top: 96px; padding-top: 64px; border-top: 1px solid var(--line); }
+  .inquiry h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); margin-bottom: 12px; }
+  .inquiry .lead { color: var(--muted); margin-bottom: 32px; max-width: 560px; }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 720px;
   }
+  .field { display: flex; flex-direction: column; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; }
+  .field input, .field textarea {
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 10px 12px;
+    transition: border-color 0.2s ease;
+  }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
+  .field textarea { resize: vertical; min-height: 140px; }
+
+  .submit-btn {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #fff;
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    padding: 12px 28px;
+    cursor: pointer;
+    justify-self: start;
+    transition: opacity 0.2s ease;
+  }
+  .submit-btn:hover { opacity: 0.88; }
+  .form-note { grid-column: 1 / -1; font-size: 0.82rem; color: var(--muted); }
+
+  footer {
+    padding: 40px 48px;
+    border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-inner strong { color: var(--ink); display: block; margin-bottom: 8px; font-size: 0.92rem; }
+  .footer-inner p { margin-bottom: 3px; }
+  .footer-copy { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
 
   @media (max-width: 720px) {
     .nav { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -103,6 +148,9 @@
     .section { padding: 0 24px 72px; }
     .map-frame { aspect-ratio: 4 / 3; margin-bottom: 40px; }
     .info-grid { grid-template-columns: 1fr; gap: 40px; }
+    .inquiry { margin-top: 64px; padding-top: 48px; }
+    .form-grid { grid-template-columns: 1fr; }
+    footer { padding: 32px 24px; }
   }
 </style>
 </head>
@@ -164,11 +212,64 @@
       </div>
     </div>
   </div>
+
+  <div class="inquiry">
+    <h2>설계 문의</h2>
+    <p class="lead">프로젝트 개요를 남겨 주시면 담당자가 확인 후 연락드립니다. 대지 위치와 용도, 대략적인 규모를 함께 적어 주시면 상담이 빠릅니다.</p>
+
+    <form class="form-grid" id="inquiry-form">
+      <div class="field">
+        <label for="f-name">성함 / 기관명</label>
+        <input type="text" id="f-name" required>
+      </div>
+      <div class="field">
+        <label for="f-contact">연락처</label>
+        <input type="text" id="f-contact" required>
+      </div>
+      <div class="field full">
+        <label for="f-subject">문의 제목</label>
+        <input type="text" id="f-subject" required>
+      </div>
+      <div class="field full">
+        <label for="f-message">문의 내용 (대지 위치 · 용도 · 규모)</label>
+        <textarea id="f-message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">메일로 문의 보내기</button>
+      <p class="form-note">※ 버튼을 누르면 작성하신 내용이 담긴 메일이 기본 메일 앱에서 열립니다. 전송 버튼을 눌러 주셔야 접수됩니다. 바로 통화를 원하시면 063-226-2121로 연락 주세요.</p>
+    </form>
+  </div>
 </section>
 
 <footer>
-  &copy; 2026 (주)율그룹건축사사무소. All rights reserved.
+  <div class="footer-inner">
+    <strong>(주)율그룹건축사사무소</strong>
+    <p>전북특별자치도 전주시 완산구 홍산남로 82, 402호 (효자동3가)</p>
+    <p>TEL 063-226-2121 · FAX 063-226-2125 · yularc1@daum.net</p>
+    <p>사업자등록번호 402-81-19233 · 건축사사무소 등록 제 전북특별자치도-건축사사무소-6호</p>
+    <div class="footer-copy">&copy; 2026 (주)율그룹건축사사무소. All rights reserved.</div>
+  </div>
 </footer>
+
+<script>
+  document.getElementById('inquiry-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('f-name').value.trim();
+    const contact = document.getElementById('f-contact').value.trim();
+    const subject = document.getElementById('f-subject').value.trim();
+    const message = document.getElementById('f-message').value.trim();
+
+    const body = [
+      '성함 / 기관명: ' + name,
+      '연락처: ' + contact,
+      '',
+      message
+    ].join('\n');
+
+    window.location.href = 'mailto:yularc1@daum.net'
+      + '?subject=' + encodeURIComponent('[홈페이지 문의] ' + subject)
+      + '&body=' + encodeURIComponent(body);
+  });
+</script>
 
 </body>
 </html>

@@ -93,12 +93,15 @@
   .award-year li:last-child { margin-bottom: 0; }
 
   footer {
-    padding: 32px 48px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--muted);
+    padding: 40px 48px;
     border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--muted);
   }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-inner strong { color: var(--ink); display: block; margin-bottom: 8px; font-size: 0.92rem; }
+  .footer-inner p { margin-bottom: 3px; }
+  .footer-copy { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
 
   @media (max-width: 720px) {
     .nav { padding: 16px 24px; flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -301,7 +304,13 @@
 </section>
 
 <footer>
-  &copy; 2026 (주)율그룹건축사사무소. All rights reserved.
+  <div class="footer-inner">
+    <strong>(주)율그룹건축사사무소</strong>
+    <p>전북특별자치도 전주시 완산구 홍산남로 82, 402호 (효자동3가)</p>
+    <p>TEL 063-226-2121 · FAX 063-226-2125 · yularc1@daum.net</p>
+    <p>사업자등록번호 402-81-19233 · 건축사사무소 등록 제 전북특별자치도-건축사사무소-6호</p>
+    <div class="footer-copy">&copy; 2026 (주)율그룹건축사사무소. All rights reserved.</div>
+  </div>
 </footer>
 
 </body>
