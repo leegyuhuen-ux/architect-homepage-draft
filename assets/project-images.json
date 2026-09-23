@@ -1,0 +1,305 @@
+{
+  "projects": [
+    {
+      "id": "01",
+      "name": "전주 천년 한지관",
+      "cat": "문화시설",
+      "group": "general",
+      "images": [
+        14
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "전북 전주"
+    },
+    {
+      "id": "02",
+      "name": "The May Hotel",
+      "cat": "숙박시설",
+      "group": "general",
+      "images": [
+        15
+      ],
+      "kinds": [
+        "건축 사진"
+      ],
+      "location": "전북 전주"
+    },
+    {
+      "id": "03",
+      "name": "전주효자도서관",
+      "cat": "교육시설",
+      "group": "general",
+      "images": [],
+      "kinds": [],
+      "location": ""
+    },
+    {
+      "id": "04",
+      "name": "바울센터",
+      "cat": "종교시설",
+      "group": "general",
+      "images": [],
+      "kinds": [],
+      "location": ""
+    },
+    {
+      "id": "05",
+      "name": "고우당",
+      "cat": "군산",
+      "group": "general",
+      "images": [],
+      "kinds": [],
+      "location": ""
+    },
+    {
+      "id": "06",
+      "name": "전북대학교 공대 9호관",
+      "cat": "교육시설",
+      "group": "general",
+      "images": [],
+      "kinds": [],
+      "location": ""
+    },
+    {
+      "id": "07",
+      "name": "삼천주공 3단지",
+      "cat": "공동주택",
+      "group": "housing",
+      "images": [
+        1
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "전북 전주"
+    },
+    {
+      "id": "08",
+      "name": "오성대우아파트 주택재건축 정비사업",
+      "cat": "공동주택",
+      "group": "housing",
+      "images": [
+        2
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": ""
+    },
+    {
+      "id": "09",
+      "name": "익산 신동 청솔아파트",
+      "cat": "공동주택",
+      "group": "housing",
+      "images": [
+        3
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "전북 익산"
+    },
+    {
+      "id": "10",
+      "name": "효자구역 주택재개발",
+      "cat": "공동주택",
+      "group": "housing",
+      "images": [
+        4
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "전북 전주"
+    },
+    {
+      "id": "11",
+      "name": "무주군 스마트팜 단지조성",
+      "cat": "스마트팜",
+      "group": "smartfarm",
+      "images": [
+        5
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "전북 무주"
+    },
+    {
+      "id": "12",
+      "name": "봉화 임대형 스마트팜 단지",
+      "cat": "스마트팜",
+      "group": "smartfarm",
+      "images": [
+        6
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "경북 봉화"
+    },
+    {
+      "id": "13",
+      "name": "장수 지역특화 임대형 스마트팜",
+      "cat": "스마트팜",
+      "group": "smartfarm",
+      "images": [
+        7
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "전북 장수"
+    },
+    {
+      "id": "14",
+      "name": "충남형 스마트팜 복합단지",
+      "cat": "스마트팜",
+      "group": "smartfarm",
+      "images": [
+        8
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "충남"
+    },
+    {
+      "id": "15",
+      "name": "무주 반디나래지원센터",
+      "cat": "일반건축",
+      "group": "general",
+      "images": [
+        9
+      ],
+      "kinds": [
+        "건축 사진"
+      ],
+      "location": "전북 무주"
+    },
+    {
+      "id": "16",
+      "name": "전라북도 전산통합센터",
+      "cat": "업무시설",
+      "group": "general",
+      "images": [
+        10
+      ],
+      "kinds": [
+        "조감도"
+      ],
+      "location": "전북"
+    },
+    {
+      "id": "17",
+      "name": "전북대학교 법학전문대학원",
+      "cat": "교육연구시설",
+      "group": "general",
+      "images": [
+        11,
+        12,
+        13
+      ],
+      "kinds": [
+        "조감도",
+        "건축 사진",
+        "건축 사진"
+      ],
+      "location": "전북 전주"
+    }
+  ],
+  "source_files": [
+    {
+      "number": 1,
+      "name": "공동주택/삼천주공 3단지.png",
+      "width": 5000,
+      "height": 3537
+    },
+    {
+      "number": 2,
+      "name": "공동주택/오성대우아파트 주택재건축 정비사업.png",
+      "width": 1587,
+      "height": 1121
+    },
+    {
+      "number": 3,
+      "name": "공동주택/익산신동청솔아파트.jpg",
+      "width": 5000,
+      "height": 3537
+    },
+    {
+      "number": 4,
+      "name": "공동주택/효자구역주택재개발조감도.jpg",
+      "width": 5000,
+      "height": 3535
+    },
+    {
+      "number": 5,
+      "name": "스마트팜/무주군 스마트팜 단지조성.jpg",
+      "width": 6000,
+      "height": 4238
+    },
+    {
+      "number": 6,
+      "name": "스마트팜/봉화 임대형스마트팜 단지 조감도.jpg",
+      "width": 5000,
+      "height": 3750
+    },
+    {
+      "number": 7,
+      "name": "스마트팜/장수 지역특화 임대형 스마트팜 조성사업.jpg",
+      "width": 5000,
+      "height": 3750
+    },
+    {
+      "number": 8,
+      "name": "스마트팜/충남형 스마트팜 복합단지.jpg",
+      "width": 7000,
+      "height": 5250
+    },
+    {
+      "number": 9,
+      "name": "일반건축/무주 반디나래지원센터.jpg",
+      "width": 1702,
+      "height": 1225
+    },
+    {
+      "number": 10,
+      "name": "일반건축/전라북도 전산통합센터.jpg",
+      "width": 5000,
+      "height": 3516
+    },
+    {
+      "number": 11,
+      "name": "일반건축/전북대학교 법학전북대학원-1.jpg",
+      "width": 2600,
+      "height": 1838
+    },
+    {
+      "number": 12,
+      "name": "일반건축/전북대학교 법학전북대학원-2.jpg",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "number": 13,
+      "name": "일반건축/전북대학교 법학전북대학원-3.jpg",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "number": 14,
+      "name": "일반건축/전주천년한지관.jpg",
+      "width": 5500,
+      "height": 3889
+    },
+    {
+      "number": 15,
+      "name": "일반건축/팔복동 더 메이 호텔.jpg",
+      "width": 5818,
+      "height": 3827
+    }
+  ]
+}

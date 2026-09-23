@@ -1,0 +1,37 @@
+{
+  "chromium": {
+    "pages": 22,
+    "layouts": 154,
+    "links": 83,
+    "fonts": [
+      {
+        "family": "MaruBuri",
+        "status": "loaded"
+      },
+      {
+        "family": "SUIT Variable",
+        "status": "loaded"
+      }
+    ],
+    "errors": [],
+    "overflow": [],
+    "broken": [],
+    "uploadedImages": 15
+  },
+  "webkit": {
+    "engine": "WebKit 26.5 on Windows; mobile emulation",
+    "layouts": 88,
+    "errors": [],
+    "overflow": [],
+    "fonts": [
+      {
+        "family": "MaruBuri",
+        "status": "loaded"
+      },
+      {
+        "family": "SUIT Variable",
+        "status": "loaded"
+      }
+    ]
+  }
+}

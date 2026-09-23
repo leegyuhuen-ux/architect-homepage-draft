@@ -6,9 +6,6 @@
 <meta name="description" content="(주)율그룹건축사사무소 소개 — 사무소 개요, 주요 업무, 대표이사 강문수·김희순 약력.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%238a5c33'/><path d='M7 25V13l9-6 9 6v12h-6v-8h-6v8z' fill='%23faf9f7'/></svg>">
 <title>소개 — (주)율그룹건축사사무소</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #faf9f7;
@@ -22,11 +19,11 @@
   body {
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'SUIT Variable', sans-serif;
     line-height: 1.7;
     overflow-x: hidden;
   }
-  h1, h2, h3 { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; line-height: 1.3; letter-spacing: -0.02em; }
+  h1, h2, h3 { font-family: 'SUIT Variable', sans-serif; font-weight: 700; line-height: 1.3; letter-spacing: -0.02em; }
   a { color: inherit; text-decoration: none; }
 
   .nav {
@@ -36,7 +33,7 @@
     padding: 24px 48px;
     border-bottom: 1px solid var(--line);
   }
-  .nav .logo { font-family: 'Noto Sans KR', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
+  .nav .logo { font-family: 'SUIT Variable', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
   .nav ul { display: flex; gap: 32px; list-style: none; font-size: 0.9rem; }
   .nav ul a.current { color: var(--accent); }
 
@@ -129,19 +126,10 @@
     .person-grid { grid-template-columns: 1fr; gap: 32px; }
   }
 </style>
-</head>
+<link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/photos.css"><link rel="preload" href="assets/fonts/MaruBuri-Regular.woff2" as="font" type="font/woff2" crossorigin></head>
 <body>
 
-<header class="nav">
-  <a class="logo" href="index.html">(주)율그룹건축사사무소</a>
-  <ul>
-    <li><a href="index.html">홈</a></li>
-    <li><a href="about.html" class="current">소개</a></li>
-    <li><a href="portfolio.html">포트폴리오</a></li>
-    <li><a href="history.html">연혁·실적</a></li>
-    <li><a href="location.html">오시는 길</a></li>
-  </ul>
-</header>
+<a class="skip" href="#main">본문 바로가기</a><header class="nav"><a class="logo" href="index.html"><b>율.</b><span>율그룹건축사사무소<small>YUL GROUP ARCHITECTS</small></span></a><button class="menu-toggle" aria-controls="navigation" aria-expanded="false">메뉴 <span>＋</span></button><nav id="navigation" aria-label="주 메뉴"><ul><li><a href="index.html">홈</a></li><li><a aria-current="page" href="about.html">사무소</a></li><li><a href="portfolio.html">프로젝트</a></li><li><a href="history.html">기록</a></li><li><a href="location.html">연락처</a></li></ul></nav></header><main id="main">
 
 <div class="page-header">
   <div class="section-label">About</div>
@@ -196,7 +184,7 @@
   <h2>대표이사 소개</h2>
   <div class="person-grid">
     <div class="person-card">
-      <div class="person-photo"></div>
+      
       <h3>강문수</h3>
       <div class="person-role">대표이사 · 건축사 (제5102호)</div>
       <dt>학력</dt>
@@ -209,14 +197,14 @@
       <dd>
         <ul>
           <li>(現) 전주시 건축위원회 위원</li>
-          <li>(現) LH공사 전북본부 매입심의위원회 위원</li>
+          <li>LH공사 전북본부 매입심의위원회 위원</li>
           <li>전북대학교 건축공학과 총동문회장</li>
           <li>전주시 정책 자문위원 · 도시분쟁조정위원회 위원</li>
         </ul>
       </dd>
     </div>
     <div class="person-card">
-      <div class="person-photo"></div>
+      
       <h3>김희순</h3>
       <div class="person-role">대표이사 · 건축사 (제4245호)</div>
       <dt>학력</dt>
@@ -228,7 +216,7 @@
       <dt>기타</dt>
       <dd>
         <ul>
-          <li>(現) 전주시 경관위원회 위원</li>
+          <li>전주시 경관위원회 위원</li>
           <li>(現) 익산시 공공건축심의위원회 위원</li>
           <li>전북여성건축가회 명예회장</li>
           <li>전라북도 공공건축가 · 전주시 공공건축가</li>
@@ -240,15 +228,7 @@
   <p style="margin-top: 48px;"><a class="more-link" href="history.html">연혁 및 수상 이력 자세히 보기 →</a></p>
 </section>
 
-<footer>
-  <div class="footer-inner">
-    <strong>(주)율그룹건축사사무소</strong>
-    <p>전북특별자치도 전주시 완산구 홍산남로 82, 402호 (효자동3가)</p>
-    <p>TEL 063-226-2121 · FAX 063-226-2125 · yularc1@daum.net</p>
-    <p>사업자등록번호 402-81-19233 · 건축사사무소 등록 제 전북특별자치도-건축사사무소-6호</p>
-    <div class="footer-copy">&copy; 2026 (주)율그룹건축사사무소. All rights reserved.</div>
-  </div>
-</footer>
+</main><footer><div class="footer-top"><p>다음 공간의 이야기를<br>함께 시작합니다.</p><a href="location.html">프로젝트 문의 ↗</a></div><div class="footer-bottom"><strong>㈜율그룹건축사사무소</strong><p>전북특별자치도 전주시 완산구 홍산남로 82, 402호<br><a href="tel:0632262121">063-226-2121</a> · <a href="mailto:yularc1@daum.net">yularc1@daum.net</a></p><small>사업자등록번호 402-81-19233<br>© 2026 YUL GROUP ARCHITECTS</small></div></footer><button class="to-top" aria-label="맨 위로">↑</button><div class="toast" role="status"></div>
 
-</body>
+<script src="assets/site.js" defer></script><script src="assets/saved.js" defer></script><dialog id="image-dialog" aria-label="프로젝트 이미지 확대"><div class="lightbox-tools"><button id="image-prev" aria-label="이전 이미지">←</button><p id="image-caption"></p><button id="image-next" aria-label="다음 이미지">→</button><button id="image-close" aria-label="확대 보기 닫기">닫기 ×</button></div><img id="lightbox-image" alt=""></dialog><script src="assets/gallery.js" defer></script></body>
 </html>

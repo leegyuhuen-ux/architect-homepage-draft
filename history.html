@@ -6,9 +6,6 @@
 <meta name="description" content="(주)율그룹건축사사무소 연혁과 현상설계 당선 현황 — 1992년부터 현재까지의 기록.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%238a5c33'/><path d='M7 25V13l9-6 9 6v12h-6v-8h-6v8z' fill='%23faf9f7'/></svg>">
 <title>연혁·실적 — (주)율그룹건축사사무소</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #faf9f7;
@@ -22,11 +19,11 @@
   body {
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'SUIT Variable', sans-serif;
     line-height: 1.7;
     overflow-x: hidden;
   }
-  h1, h2, h3 { font-family: 'Noto Sans KR', sans-serif; font-weight: 700; line-height: 1.3; letter-spacing: -0.02em; }
+  h1, h2, h3 { font-family: 'SUIT Variable', sans-serif; font-weight: 700; line-height: 1.3; letter-spacing: -0.02em; }
   a { color: inherit; text-decoration: none; }
 
   .nav {
@@ -36,7 +33,7 @@
     padding: 24px 48px;
     border-bottom: 1px solid var(--line);
   }
-  .nav .logo { font-family: 'Noto Sans KR', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
+  .nav .logo { font-family: 'SUIT Variable', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
   .nav ul { display: flex; gap: 32px; list-style: none; font-size: 0.9rem; }
   .nav ul a.current { color: var(--accent); }
 
@@ -68,11 +65,11 @@
   .history-year {
     min-width: 110px;
     flex-shrink: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'SUIT Variable', sans-serif;
     color: var(--accent);
     font-weight: 600;
   }
-  .history-year span { display: block; font-size: 0.8rem; color: var(--muted); font-weight: 400; font-family: 'Noto Sans KR', sans-serif; }
+  .history-year span { display: block; font-size: 0.8rem; color: var(--muted); font-weight: 400; font-family: 'SUIT Variable', sans-serif; }
 
   .award-year {
     display: flex;
@@ -84,7 +81,7 @@
   .award-year .yr {
     min-width: 70px;
     flex-shrink: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'SUIT Variable', sans-serif;
     font-weight: 600;
     color: var(--accent);
   }
@@ -113,28 +110,19 @@
     .history-year, .award-year .yr { min-width: 76px; }
   }
 </style>
-</head>
+<link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/photos.css"><link rel="preload" href="assets/fonts/MaruBuri-Regular.woff2" as="font" type="font/woff2" crossorigin></head>
 <body>
 
-<header class="nav">
-  <a class="logo" href="index.html">(주)율그룹건축사사무소</a>
-  <ul>
-    <li><a href="index.html">홈</a></li>
-    <li><a href="about.html">소개</a></li>
-    <li><a href="portfolio.html">포트폴리오</a></li>
-    <li><a href="history.html" class="current">연혁·실적</a></li>
-    <li><a href="location.html">오시는 길</a></li>
-  </ul>
-</header>
+<a class="skip" href="#main">본문 바로가기</a><header class="nav"><a class="logo" href="index.html"><b>율.</b><span>율그룹건축사사무소<small>YUL GROUP ARCHITECTS</small></span></a><button class="menu-toggle" aria-controls="navigation" aria-expanded="false">메뉴 <span>＋</span></button><nav id="navigation" aria-label="주 메뉴"><ul><li><a href="index.html">홈</a></li><li><a href="about.html">사무소</a></li><li><a href="portfolio.html">프로젝트</a></li><li><a aria-current="page" href="history.html">기록</a></li><li><a href="location.html">연락처</a></li></ul></nav></header><main id="main">
 
 <div class="page-header">
   <div class="section-label">History &amp; Track Record</div>
-  <h1>연혁 · 실적</h1>
-  <p>1992년 개소 이래 33년간 쌓아온 기록입니다.</p>
+  <h1>시간이 쌓인 자리<span>.</span></h1>
+  <p>1992년부터 이어온 사무소의 발자취와 수상 기록입니다.</p>
 </div>
 
 <section class="section">
-  <h2>연혁</h2>
+  <div class="history-jump"><a href="#milestones">회사 연혁 ↓</a><a href="#competitions">공모 당선·입상 ↓</a></div><h2 id="milestones">회사 연혁</h2>
 
   <div class="history-item">
     <div class="history-year">1992<span>10월</span></div>
@@ -191,7 +179,7 @@
 </section>
 
 <section class="section">
-  <h2>현상설계 당선 현황</h2>
+  <h2 id="competitions">현상설계 당선·입상</h2>
   <p style="color: var(--muted); margin-bottom: 32px; margin-top: -24px;">대표이사 소개는 <a href="about.html" style="color: var(--accent); border-bottom: 1px solid var(--accent);">소개 페이지</a>에서 확인하실 수 있습니다.</p>
   <div class="award-year">
     <div class="yr">2025</div>
@@ -303,15 +291,7 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-inner">
-    <strong>(주)율그룹건축사사무소</strong>
-    <p>전북특별자치도 전주시 완산구 홍산남로 82, 402호 (효자동3가)</p>
-    <p>TEL 063-226-2121 · FAX 063-226-2125 · yularc1@daum.net</p>
-    <p>사업자등록번호 402-81-19233 · 건축사사무소 등록 제 전북특별자치도-건축사사무소-6호</p>
-    <div class="footer-copy">&copy; 2026 (주)율그룹건축사사무소. All rights reserved.</div>
-  </div>
-</footer>
+</main><footer><div class="footer-top"><p>다음 공간의 이야기를<br>함께 시작합니다.</p><a href="location.html">프로젝트 문의 ↗</a></div><div class="footer-bottom"><strong>㈜율그룹건축사사무소</strong><p>전북특별자치도 전주시 완산구 홍산남로 82, 402호<br><a href="tel:0632262121">063-226-2121</a> · <a href="mailto:yularc1@daum.net">yularc1@daum.net</a></p><small>사업자등록번호 402-81-19233<br>© 2026 YUL GROUP ARCHITECTS</small></div></footer><button class="to-top" aria-label="맨 위로">↑</button><div class="toast" role="status"></div>
 
-</body>
+<script src="assets/site.js" defer></script><script src="assets/saved.js" defer></script><dialog id="image-dialog" aria-label="프로젝트 이미지 확대"><div class="lightbox-tools"><button id="image-prev" aria-label="이전 이미지">←</button><p id="image-caption"></p><button id="image-next" aria-label="다음 이미지">→</button><button id="image-close" aria-label="확대 보기 닫기">닫기 ×</button></div><img id="lightbox-image" alt=""></dialog><script src="assets/gallery.js" defer></script></body>
 </html>
