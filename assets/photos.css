@@ -29,3 +29,7 @@ body{word-break:keep-all;overflow-wrap:break-word}
 @media(min-width:1520px){.project-next:before{left:60px;right:60px}}
 @media(min-width:1600px){.intro-hero{max-width:1400px;padding-left:5vw;padding-right:5vw;margin-left:auto;margin-right:auto}}
 @media(min-width:761px) and (max-width:1000px){.home-selected .work-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 16px}.home-selected .work-title{font-size:14px}}
+/* footer text: solid black for legibility */
+footer,footer p,footer a,footer strong,footer small,.footer-top p,.footer-top>a,.footer-bottom,.footer-bottom *{color:#111!important;opacity:1!important}
+.footer-top>a{border-bottom-color:#111}
+.footer-bottom{border-top-color:#9aa093}
